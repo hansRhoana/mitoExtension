@@ -30,7 +30,7 @@ img_files = sorted( glob.glob( img_search_string ) )
 mito_files = sorted( glob.glob( mito_search_string ) )
 
 for img_num in range(1):
-#for img_num in range(len(img_files)):
+# for img_num in range(len(img_files)):
 
     img_filename = img_files[img_num]
     mito_filename = mito_files[img_num]
@@ -73,7 +73,7 @@ for img_num in range(1):
     pylab.gray()
     pylab.show()
     
-    #for the erode/dilate functions
+    # Values for the erode/dilate functions
 
     radius = 2
     y,x = np.ogrid[-radius:radius+1, -radius:radius+1]
@@ -89,7 +89,7 @@ for img_num in range(1):
 ##  # Erode makes everything smaller and removes small objects
     mito_pred2 = mahotas.erode(mito_pred2, disc)
 ##  # Dilate makes everything bigger and removes small holes
-    #mito_pred2 = mahotas.dilate(mito_pred2, disc)
+    # mito_pred2 = mahotas.dilate(mito_pred2, disc)
 
     # Predictions
     pylab.imshow(mito_pred2)
@@ -102,7 +102,7 @@ for img_num in range(1):
     pylab.show()
 
     # Measure the result
-    true_positives_h5 = np.sum(np.logical_and(mito_pred2 > 0, mito_img > 0)) #hansmod/same deal
+    true_positives_h5 = np.sum(np.logical_and(mito_pred2 > 0, mito_img > 0)) 
     false_positives_h5 = np.sum(np.logical_and(mito_pred2 > 0, mito_img  == 0))
     true_negatives_h5 = np.sum(np.logical_and(mito_pred2 == 0, mito_img  == 0))
     false_negatives_h5 = np.sum(np.logical_and(mito_pred2 == 0, mito_img > 0))
@@ -134,7 +134,7 @@ for img_num in range(1):
     # Predictions with regmax method
 
     blur_imgH = scipy.ndimage.gaussian_filter(mito_prob, 16)
-    mito_pred3 = blur_imgH<85
+    mito_pred3 = blur_imgH<90
     blur_imgH = blur_imgH.astype(np.uint8)
     
     mito_pred3 = mahotas.erode(mito_pred3, disc)
@@ -151,7 +151,7 @@ for img_num in range(1):
     print nr_nuclei
     pylab.imshow(mito_pred3)
     pylab.show()
-    dist = scipy.ndimage.distance_transform_edt(mito_predswag)#swag
+    dist = scipy.ndimage.distance_transform_edt(mito_pred3)
     dist = dist.max() - dist
     dist-=dist.min()
     dist = dist/float(dist.ptp())*255
