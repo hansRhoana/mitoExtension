@@ -1,8 +1,8 @@
 #
 #
+# The Mitochondria 2D Segmentation Base of the Rhoana Extension
+#
 # Current result:.3711
-#
-#
 
 import mahotas
 import scipy.ndimage
