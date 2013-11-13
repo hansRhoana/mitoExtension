@@ -139,9 +139,9 @@ for img_num in range(1):
     
     mito_pred3 = mahotas.erode(mito_pred3, disc)
     mito_pred3 = mito_pred3.astype(np.uint8)
-    #labeled, nr_objects = scipy.ndimage.label(mito_pred3)
-    #print nr_objects
-    #labeled = labeled.astype(np.uint8)
+    # labeled, nr_objects = scipy.ndimage.label(mito_pred3)
+    # print nr_objects
+    # labeled = labeled.astype(np.uint8)
 
     rmax = pymorph.regmax(blur_imgH)
     pylab.imshow(pymorph.overlay(mito_prob, rmax))
@@ -176,7 +176,7 @@ for img_num in range(1):
     pylab.gray()
     pylab.show()
     
-    true_positives = np.sum(np.logical_and(nuclei > 0, mito_img > 0)) #hansmod/same deal
+    true_positives = np.sum(np.logical_and(nuclei > 0, mito_img > 0)) 
     false_positives = np.sum(np.logical_and(nuclei > 0, mito_img == 0))
     true_negatives = np.sum(np.logical_and(nuclei == 0, mito_img == 0))
     false_negatives = np.sum(np.logical_and(nuclei == 0, mito_img > 0))
@@ -201,9 +201,9 @@ for img_num in range(1):
 
     print ''
 
-    #testing 
-    #
-    #Regmax method outputs grossly inadequate results for our purposes
+    # testing 
+    # Regmax method outputs grossly inadequate results for our purposes; further development and testing are needed to make use of this
+    # method, to improve the segmentation results
     
     
 print 'Done.'
