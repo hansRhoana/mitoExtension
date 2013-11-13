@@ -1,6 +1,6 @@
 #
 #
-# The Mitochondria 2D Segmentation Base of the Rhoana Extension
+# The Mitochondria Segmentation Base of the Rhoana Extension
 #
 # Current result:.3711
 
