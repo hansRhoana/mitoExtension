@@ -2,7 +2,7 @@
 #
 # The Mitochondria Segmentation Base of the Rhoana Extension
 #
-# Current result:.3711
+# Current result:.3867
 
 import mahotas
 import scipy.ndimage
@@ -64,18 +64,18 @@ for img_num in range(1):
     prob_file.close()
     print mito_prob.max()
     print mito_prob.min()
-    mito_prob = mito_prob*100
-    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 16)
+    mito_prob = mito_prob
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
     print blur_img.max()
     print blur_img.min()
-    mito_pred2 = blur_img<85
+    mito_pred2 = blur_img<.85
     pylab.imshow(mito_pred2)
     pylab.gray()
     pylab.show()
     
     # Values for the erode/dilate functions
 
-    radius = 2
+    radius = 1.5
     y,x = np.ogrid[-radius:radius+1, -radius:radius+1]
     disc = x*x + y*y <= radius*radius
 
@@ -127,7 +127,7 @@ for img_num in range(1):
     print ''
     #
     #
-    # Current result:.3711
+    # Current result:.3867
     #
     #
     
