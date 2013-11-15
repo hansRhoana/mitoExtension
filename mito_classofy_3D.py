@@ -66,348 +66,450 @@ for img_num in range(1):
     #mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     #prob_file.close()
     
-    # loop over the results
-    
-    i = 50
-    for i in range (50, 99)
-      ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-      prob_file = h5py.File('Thousands_mito_em_s11[i].png_processed (1).h5', 'r')
-      label_index = 1
-      mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
-      prob_file.close()
-   
-    for i in range (50, 99)
-      mito_prob[i] = mito_prob[i]*100
-      blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 16)
-      mito_pred2[i] = blur_img[i]<85
-      mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    # load
-    '''
-    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
-    label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
-    prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
+    # load the results
     
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
     label_index = 1
-    mito_prob[i] = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
-    blur_img[i] = scipy.ndimage.gaussian_filter(mito_prob[i], 13)
-    mito_pred2[i] = blur_img<.85
-    mito_pred2[i] = mahotas.erode(mito_pred2[i], disc)
-    '''
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+
+    ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
+    prob_file = h5py.File('Thousands_mito_em_s1150.png_processed.h5', 'r')
+    label_index = 1
+    mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
+    prob_file.close()
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred2 = blur_img<.85
+    mito_pred2 = mahotas.erode(mito_pred2, disc)
+  
+
     
 
     
