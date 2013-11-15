@@ -2,7 +2,7 @@
 #
 # The Mitochondria Segmentation Base of the Rhoana Extension
 #
-# Current result:.3941
+# Current result:.6281 (quite a jump!)
 
 import mahotas
 import scipy.ndimage
@@ -58,17 +58,17 @@ for img_num in range(1):
     # Make some classification
     
     ilastik_filename = img_filename.replace('.png', '.png_processed.h5')
-    prob_file = h5py.File('Thousands_mito_em_s1152.png_processed (1).h5', 'r')
+    prob_file = h5py.File('Thousands_mito_em_s1152 (1).png_processed.h5', 'r')
     label_index = 1
     mito_prob = prob_file['/volume/prediction'][0,0,:,:,label_index]
     prob_file.close()
     print mito_prob.max()
     print mito_prob.min()
     mito_prob = mito_prob
-    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    blur_img = scipy.ndimage.gaussian_filter(mito_prob, 12.27)
     print blur_img.max()
     print blur_img.min()
-    mito_pred2 = blur_img<.85
+    mito_pred2 = blur_img<.905
     pylab.imshow(mito_pred2)
     pylab.gray()
     pylab.show()
