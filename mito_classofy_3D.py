@@ -234,7 +234,7 @@ for img_num in range(1):
     prob_file19 = h5py.File('Thousands_mito_em_s1168.png_processed.h5', 'r')
     label_index = 1
     mito_prob19 = prob_file19['/volume/prediction'][0,0,:,:,label_index]
-    prob_fil1e19.close()
+    prob_file19.close()
     blur_img19 = scipy.ndimage.gaussian_filter(mito_prob19, 13)
     mito_pred219 = blur_img19<.85
     mito_pred219 = mahotas.erode(mito_pred219, disc)
@@ -387,7 +387,7 @@ for img_num in range(1):
     prob_file36 = h5py.File('Thousands_mito_em_s1185.png_processed.h5', 'r')
     label_index = 1
     mito_prob36 = prob_file36['/volume/prediction'][0,0,:,:,label_index]
-    prob_file.close()
+    prob_file36.close()
     blur_img36 = scipy.ndimage.gaussian_filter(mito_prob36, 13)
     mito_pred236 = blur_img36<.85
     mito_pred236 = mahotas.erode(mito_pred236, disc)
@@ -476,7 +476,7 @@ for img_num in range(1):
     
     prob_file46 = h5py.File('Thousands_mito_em_s1195.png_processed.h5', 'r')
     label_index = 1
-    mito_prob = prob_file46['/volume/prediction'][0,0,:,:,label_index]
+    mito_prob46 = prob_file46['/volume/prediction'][0,0,:,:,label_index]
     prob_file46.close()
     blur_img46 = scipy.ndimage.gaussian_filter(mito_prob46, 13)
     mito_pred246 = blur_img46<.85
