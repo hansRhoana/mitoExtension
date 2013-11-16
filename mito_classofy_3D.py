@@ -533,7 +533,7 @@ for img_num in range(1):
     
     # Connected Components Phase - optimization - taken out because better 3D
     # renderings were made with Vaa3d (http://www.vaa3d.org/) using the adjusted
-    # segmentations above ^^^
+    # segmentations above 
     
     # ##
     #print mito_prob.max()
