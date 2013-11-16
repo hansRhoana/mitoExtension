@@ -518,7 +518,8 @@ for img_num in range(1):
     mito_pred250 = blur_img50<.85
     mito_pred250 = mahotas.erode(mito_pred250, disc)
   
-
+    # The preceding code modifies the probabilities, and these probabilites
+    # are subsequently fed into Vaa3d to produce the 3D mitochondria renderings
     
 
     
@@ -528,16 +529,13 @@ for img_num in range(1):
     #
     #
     #
-    #
-    #
-    #
-    #
-    #
-    #
     
     
-    # Connected Components Phase - optimization
+    # Connected Components Phase - optimization - taken out because better 3D
+    # renderings were made with Vaa3d (http://www.vaa3d.org/) using the adjusted
+    # segmentations above ^^^
     
+    # ##
     #print mito_prob.max()
     #print mito_prob.min()
     #mito_prob = mito_prob*100
@@ -569,22 +567,10 @@ for img_num in range(1):
 
     #################################
     #
-    # Optimization
+    # Updating and optimization of the code is underway
     #
-    ##
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    #
-    ######################################
+    #################################
+    
    
 
     
