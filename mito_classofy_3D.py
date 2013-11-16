@@ -54,7 +54,7 @@ for img_num in range(1):
 
     # Values for the erode/dilate functions
     
-    radius = 2
+    radius = 1.5
     y,x = np.ogrid[-radius:radius+1, -radius:radius+1]
     disc = x*x + y*y <= radius*radius
 
