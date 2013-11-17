@@ -568,7 +568,9 @@ for img_num in range(1):
     labeled = labeled.astype(np.uint8)
     obj = 1
     for obj in labeled:
-        if obj.length()
+        if (obj.length()+radius == labeled)
+            
+            
     
     
 
