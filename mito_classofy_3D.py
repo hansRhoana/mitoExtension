@@ -572,7 +572,37 @@ for img_num in range(1):
         if robj == labeled[obj] :
             newobj = labeled[obj].at(obj.length()+radius-obj.length()) # bordering neurite
             nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
-        
+    
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 1
+    for obj in labeled:
+        robj = labeled[obj].at(obj.lenth()+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].at(obj.length()+radius-obj.length()) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 1
+    for obj in labeled:
+        robj = labeled[obj].at(obj.lenth()+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].at(obj.length()+radius-obj.length()) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 1
+    for obj in labeled:
+        robj = labeled[obj].at(obj.lenth()+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].at(obj.length()+radius-obj.length()) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
         
     
     
@@ -594,39 +624,6 @@ for img_num in range(1):
 
 
 
-    #We can also use the regmax method, e.g.: 
-     
-    '''
-    blur_imgH = scipy.ndimage.gaussian_filter(mito_prob, 12.27)
-    blur_imgH = blur_imgH.astype(np.uint8)
-    mito_pred2 = mito_pred2.astype(np.uint8)
-
-    rmax = pymorph.regmax(blur_imgH)
-    pylab.imshow(pymorph.overlay(mito_prob, rmax))
-    pylab.gray()
-    pylab.show()
-    seeds,nr_nuclei = scipy.ndimage.label(rmax)
-    print nr_nuclei
-    dist = scipy.ndimage.distance_transform_edt(mito_pred2)
-    dist = dist.max() - dist
-    dist-=dist.min()
-    dist = dist/float(dist.ptp())*255
-    dist = dist.astype(np.uint8)
-    pylab.imshow(dist)
-    pylab.gray()
-    pylab.show()
-    nuclei = pymorph.cwatershed(dist, seeds)
-    pylab.imshow(nuclei)
-    pylab.gray()
-    pylab.show()
-    
-    obj = 1
-    for obj in labeled:
-        if obj.length()+2 = rmax
-        
-        
-    '''
-    
     
     
     
