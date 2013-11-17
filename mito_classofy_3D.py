@@ -568,9 +568,12 @@ for img_num in range(1):
     labeled = labeled.astype(np.uint8)
     obj = 1
     for obj in labeled:
-        if obj+obj.length()+radius == labeled :
-            newobj = obj.length()+radius-obj.length() #bordering neurite
+        robj = labeled[obj].at(obj.lenth()+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].at(obj.length()+radius-obj.length()) # bordering neurite
             nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+        
+        
     
     
             
