@@ -573,9 +573,106 @@ for img_num in range(1):
             newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
             labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
             nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
-    
-    
             
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+    
+    
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+    
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+    
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+            
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj = 0
+    for labeled[obj] in labeled:
+        robj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].lenth()/2+radius)
+        if robj == labeled[obj] :
+            newobj = labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2 +radius) - 
+            labeled[obj].scipy.ndimage.at(labeled[obj].ypos()+labeled[obj].length()/2) # bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
             
         
             
@@ -585,13 +682,10 @@ for img_num in range(1):
             
             
     mlab.clf()
-    values = mito_pred2+mito_pred22+mito_pred23+mito_pred24+mito_pred25+mito_pred26+mito_pred27+mito_pred28+mito+pred29+
-    mito_pred210+mito_pred211+mito_pred212+mito_pred213+mito_pred214+mito_pred215+mito_pred216+mito_pred217+mito_pred218
-    + mito_pred219+mito_pred220+mito_pred221+mito_pred222+mito_pred223+mito_pred224+mito_pred225+mito_pred226+mito_pred227+
-    mito_pred228+mito_pred229+mito_pred230+mito_pred231+mito_pred232+mito_pred233+mito_pred234+mito_pred235+mito_pred236+
-    mito_pred237+mito_pred238+mito_pred239+mito_pred240+mito_pred241+mito_pred242+mito_pred243+mito_pred244+mito_pred245+
-    mito_pred246+mito_pred247+mito_pred248+mito_pred249+mito_pred250
-    mlab.contour3d(values)
+    values = nl+nl2+nl3+nl4+nl5+nl6+nl7+nl8+nl9+nl10+nl11+nl12+nl13+nl14+nl15+nl16+nl17+nl18+nl19+nl20+nl21+nl22+
+    nl23+nl24+nl25+nl26+nl27+nl28+nl29+nl30+nl31+nl32+nl33+nl34+nl35+nl36+nl37+nl38+nl39+nl40+nl41+nl42+nl43+nl44+nl45
+    +nl46+nl47+nl48+nl49+nl50
+    mlab.contour3d(values) # 3D reconstruction of the neurites, using all segmentations of the neurites
     
     
 
