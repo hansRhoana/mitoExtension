@@ -568,9 +568,21 @@ for img_num in range(1):
     labeled = labeled.astype(np.uint8)
     obj = 1
     for obj in labeled:
-        if (obj.length()+radius == labeled)
+        if obj+obj.length()+radius == labeled :
+            newobj = obj.length()+radius-obj.length() #bordering neurite
+            nl, nr_nobjects = scipy.ndimage.label(newobj) # segment the neurite
+    
+    
             
             
+    mlab.clf()
+    values = mito_pred2+mito_pred22+mito_pred23+mito_pred24+mito_pred25+mito_pred26+mito_pred27+mito_pred28+mito+pred29+
+    mito_pred210+mito_pred211+mito_pred212+mito_pred213+mito_pred214+mito_pred215+mito_pred216+mito_pred217+mito_pred218
+    + mito_pred219+mito_pred220+mito_pred221+mito_pred222+mito_pred223+mito_pred224+mito_pred225+mito_pred226+mito_pred227+
+    mito_pred228+mito_pred229+mito_pred230+mito_pred231+mito_pred232+mito_pred233+mito_pred234+mito_pred235+mito_pred236+
+    mito_pred237+mito_pred238+mito_pred239+mito_pred240+mito_pred241+mito_pred242+mito_pred243+mito_pred244+mito_pred245+
+    mito_pred246+mito_pred247+mito_pred248+mito_pred249+mito_pred250
+    mlab.contour3d(values)
     
     
 
