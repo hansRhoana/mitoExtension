@@ -562,18 +562,26 @@ for img_num in range(1):
     # We feed the mitochondria segmentation results into a Rhoana script for neurite detection, segmentation and
     # 3D reconstruction, but we can also use the regmax approach to achieve a fair result in neurite reconstruction
     
-    blur_imgH = scipy.ndimage.gaussian_filter(mito_prob, 12.27)
+    
+    blur_imgH = scipy.ndimage.gaussian_filter(mito_prob, 13)
+    mito_pred3 = blur_imgH<85
     blur_imgH = blur_imgH.astype(np.uint8)
     
+    mito_pred3 = mahotas.erode(mito_pred3, disc)
+    mito_pred3 = mito_pred3.astype(np.uint8)
+    #labeled, nr_objects = scipy.ndimage.label(mito_pred3)
+    #print nr_objects
+    #labeled = labeled.astype(np.uint8)
+
     rmax = pymorph.regmax(blur_imgH)
     pylab.imshow(pymorph.overlay(mito_prob, rmax))
     pylab.gray()
     pylab.show()
     seeds,nr_nuclei = scipy.ndimage.label(rmax)
     print nr_nuclei
-    mito_pred3 = blur_imgH < .905
-    mito_pred3 = mahotas.erode(mito_pred3, disc)
-    dist = scipy.ndimage.distance_transform_edt(mito_pred3)
+    mito_predswag = blur_imgH < .965
+    mito_predswag = mahotas.erode(mito_predswag, disc)
+    dist = scipy.ndimage.distance_transform_edt(mito_predswag)
     dist = dist.max() - dist
     dist-=dist.min()
     dist = dist/float(dist.ptp())*255
@@ -585,6 +593,19 @@ for img_num in range(1):
     pylab.imshow(nuclei)
     pylab.gray()
     pylab.show()
+
+
+
+
+
+
+    mito_pred2 = mito_pred2.astype(np.uint8)
+    labeled, nr_objects = scipy.ndimage.label(mito_pred2)
+    labeled = labeled.astype(np.uint8)
+    obj
+    for obj in labeled
+        if obj.length() 
+        
     
     
     
