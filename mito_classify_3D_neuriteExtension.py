@@ -1115,14 +1115,7 @@ for img_num in range(1):
             nl50, nr_nobjects50 = scipy.ndimage.label(newobj) # segment the neurite
             
     
-            
-        
-            
-        
     
-    
-            
-            
     mlab.clf()
     values = nl+nl2+nl3+nl4+nl5+nl6+nl7+nl8+nl9+nl10+nl11+nl12+nl13+nl14+nl15+nl16+nl17+nl18+nl19+nl20+nl21+nl22+
     nl23+nl24+nl25+nl26+nl27+nl28+nl29+nl30+nl31+nl32+nl33+nl34+nl35+nl36+nl37+nl38+nl39+nl40+nl41+nl42+nl43+nl44+nl45
