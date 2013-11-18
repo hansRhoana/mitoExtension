@@ -561,7 +561,7 @@ for img_num in range(1):
     #pylab.show()
     
     # We feed the mitochondria segmentation results into a Rhoana script for neurite detection, segmentation and
-    # 3D reconstruction, but the ndimage.label approach could also be used to perform this task:
+    # 3D reconstruction, but the following ndimage.label approach could also be used to perform this task:
     #
     
     mito_pred2 = mito_pred2.astype(np.uint8)
