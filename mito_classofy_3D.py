@@ -1,6 +1,6 @@
 #
 #
-# Mitochondria 3D Reconstruction (+ neurite detection, segmentation and reconstruction)
+# Mitochondria 3D Reconstruction 
 #
 # 
 
