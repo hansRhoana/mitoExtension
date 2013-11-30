@@ -1,7 +1,7 @@
 #
 #
 # Mitochondria 3D Reconstruction + neurite detection, segmentation and reconstruction
-#
+# OUTDATES SCRIPT - We now just merge the lebeling results from mito_classify_3D with Rhoana's neurite predictions
 # 
 
 import mahotas
