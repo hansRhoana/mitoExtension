@@ -14,6 +14,7 @@ import pylab
 import pymorph
 import matplotlib
 import mayavi
+from enthought.mayavi import mlab
 
 def normalize_image(original_image, saturation_level=0.005):
     sorted_image = np.sort( np.uint8(original_image).ravel() )
