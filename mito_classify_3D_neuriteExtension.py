@@ -1,7 +1,7 @@
 #
 #
 # Mitochondria 3D Reconstruction + neurite detection, segmentation and reconstruction
-# OUTDATED SCRIPT - We now just merge the lebeling results from mito_classify_3D with Rhoana's neurite predictions
+# Update: OUTDATED SCRIPT - We now just merge the stack of mitochondria labeling results from mito_classify_3D with Rhoana's neurite prediction stack and segment and reconstruct the resulting stack
 # 
 
 import mahotas
@@ -563,7 +563,7 @@ for img_num in range(1):
     
     # We feed the mitochondria segmentation results into a Rhoana script for neurite detection, segmentation and
     # 3D reconstruction, but the following ndimage.label approach could also be used to perform this task:
-    # OUTDATED SCRIPT - We now just merge the lebeling results from mito_classify_3D with Rhoana's neurite predictions
+    # Update: OUTDATED SCRIPT - We now just merge the stack of mitochondria labeling results from mito_classify_3D with Rhoana's neurite prediction stack and segment and reconstruct the resulting stack
     #
     #
     
