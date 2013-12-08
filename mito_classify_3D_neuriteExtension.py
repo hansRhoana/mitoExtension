@@ -1,7 +1,7 @@
 #
 #
 # Mitochondria 3D Reconstruction + neurite detection, segmentation and reconstruction
-# OUTDATES SCRIPT - We now just merge the lebeling results from mito_classify_3D with Rhoana's neurite predictions
+# OUTDATED SCRIPT - We now just merge the lebeling results from mito_classify_3D with Rhoana's neurite predictions
 # 
 
 import mahotas
@@ -13,7 +13,7 @@ import h5py
 import pylab
 import pymorph
 import matplotlib
-import mayavi
+from enthought.mayavi import mlab
 
 def normalize_image(original_image, saturation_level=0.005):
     sorted_image = np.sort( np.uint8(original_image).ravel() )
@@ -529,6 +529,7 @@ for img_num in range(1):
     mito_pred237+mito_pred238+mito_pred239+mito_pred240+mito_pred241+mito_pred242+mito_pred243+mito_pred244+mito_pred245+
     mito_pred246+mito_pred247+mito_pred248+mito_pred249+mito_pred250
     mlab.contour3d(values)
+    mlab.show()
     
   
     # We can also feed these probabilities into the Vaa3D application to generate 3D renderings
@@ -562,6 +563,8 @@ for img_num in range(1):
     
     # We feed the mitochondria segmentation results into a Rhoana script for neurite detection, segmentation and
     # 3D reconstruction, but the following ndimage.label approach could also be used to perform this task:
+    # OUTDATED SCRIPT - We now just merge the lebeling results from mito_classify_3D with Rhoana's neurite predictions
+    #
     #
     
     mito_pred2 = mito_pred2.astype(np.uint8)
@@ -1121,7 +1124,7 @@ for img_num in range(1):
     nl23+nl24+nl25+nl26+nl27+nl28+nl29+nl30+nl31+nl32+nl33+nl34+nl35+nl36+nl37+nl38+nl39+nl40+nl41+nl42+nl43+nl44+nl45
     +nl46+nl47+nl48+nl49+nl50
     mlab.contour3d(values) # 3D reconstruction of the neurites, using all segmentations of the neurites
-    
+    mlab.show()
     
 
     
