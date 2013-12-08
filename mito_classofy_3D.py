@@ -530,6 +530,7 @@ for img_num in range(1):
     mito_pred237+mito_pred238+mito_pred239+mito_pred240+mito_pred241+mito_pred242+mito_pred243+mito_pred244+mito_pred245+
     mito_pred246+mito_pred247+mito_pred248+mito_pred249+mito_pred250
     mlab.contour3d(values)
+    mlab.show()
     
   
     # We can also feed these probabilities into the Vaa3D application to generate 3D renderings
