@@ -112,7 +112,7 @@ for img_num in range(1):
     prob_file5.close()
     blur_img5 = scipy.ndimage.gaussian_filter(mito_prob5, 13)
     mito_pred25 = blur_img5<.85
-    mito_pred25 = mahotas.erode(mito_pred25, disc)
+    mito_pred25 = mahotas.erode(mito_pred25, disc)//
 
     
     prob_file6 = h5py.File('Thousands_mito_em_s1155.png_processed.h5', 'r')
